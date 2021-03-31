@@ -1,0 +1,5 @@
+f=open('newback.inp')
+n,v0=map(lambda x:int(x),f.readline().split())
+print(n,v0)
+v,c,p=map(lambda x:list(map(lambda y:int(y),x.split())),f.readlines())
+print(v,c,p)

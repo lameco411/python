@@ -12,3 +12,7 @@ def change(n,k):
     res={}
     return ways(n,k,len(k)-1)
 print(change(n,ks))
+f.close()
+f=open('change.out','w')
+f.write(str(change(n,ks)))
+f.close()

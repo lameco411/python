@@ -17,8 +17,7 @@ def attempt(i):
             if k==m:                        
                 print(a)
                 ketqua.append(" ".join(list(map(lambda y:str(y),a))))
-                k=0
-                
+                k=0                
         else:
             attempt(i+1)
 attempt(0)
