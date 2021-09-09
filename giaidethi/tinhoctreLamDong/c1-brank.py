@@ -1,0 +1,5 @@
+f=open('c1-brank.inp')
+n,m=map(lambda x:int(x),f.readline().split())
+a=list(map(lambda x:x.split(),f.readlines()))
+print(n,m)
+print(a)
