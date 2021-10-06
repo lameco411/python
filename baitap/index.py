@@ -1,3 +1,3 @@
 import thuvien as tv
 
-print(tv.GiaiThua(10))
+print(tv.checkDescending(54321))

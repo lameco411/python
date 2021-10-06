@@ -1,6 +1,17 @@
+#đọc file
 f=open('c1-brank.inp')
+#destructuring 
 n,m=map(lambda x:int(x),f.readline().split())
+# đọc tất cả các dòng còn lại
 a=list(map(lambda x:x.split(),f.readlines()))
+#đóng file
+f.close()
+'''
+Biết được thứ hạng của mình thì phải so sánh với n-1 người
+hoặc là:
+1. Mình so sánh với người đã biết thứ hạng rồi, mà người đó là số 2 và mình hơn người đó
+2. mình so sánh với người đã biết thứ hạng rồi, mà người đó là thứ n-1 và mình nhỏ hơn người đó
+'''
 array=[]
 for i in range(n):  
     array.append({'rank': 0, 'number': 0, 'greater': 0, 'less': 0, 'last': False, 'first': False})
@@ -29,7 +40,9 @@ for x in array:
     if x["rank"]!=0 or x["last"]==True or x["first"]==True:
         sohocsinhbietduocthuhang+=1
 print(sohocsinhbietduocthuhang)
-
+f=open("c1-brank.out",'w')
+f.writelines(str(sohocsinhbietduocthuhang))
+f.close()
 '''
 Khởi tạo một mảng học sinh
 viết hàm để kiểm tra 2 số

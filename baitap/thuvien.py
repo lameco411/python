@@ -6,7 +6,7 @@ def bai1(n):
         for i in range(1,n+1):
             kq+=i
         return kq
-    return "Số nhập vào không hợp lệ"
+    return -1 #Không hợp lệ
 #bài 2
 def bai2(n):
     if n>0: 
@@ -326,3 +326,117 @@ def bai41(n):
     for i in range(n):
         kq=1/(1+kq)
     return kq
+# bài 42 => bài có liên quan tới bài 1
+def TimGiaTriNguyenKLonNhat(n):
+    k=1
+    while bai1(k)<n:
+        k+=1
+    return k
+# bài 43
+def Demsoluongchuso(n):    
+    if type(n) is int:
+        n = str(n)
+        return len(n)
+    else:
+        return "So khong hop le"
+# bài 44:
+def sumdigit(n):
+   return sum(int(x) for x in str(n) if x.isdigit())
+# 45. Hãy tính tích các chữ số của số nguyên dương n.
+def multi(n):
+    if type(n) is int:
+        kq=1
+        for x in str(n):
+            kq*=int(x)
+        return kq
+    else:
+        return "So khong hop le"
+#46. Hãy đếm số lượng chữ số lẻ của số nguyên dương n.
+def countodd(n):
+    if type(n) is int:
+        k=0
+        for x in str(n):
+            if int(x) % 2==1:
+                k+=1
+        return k
+    else:
+        return "So khong hop le"
+#47. Hãy tính tổng các chữ số chẵn của số nguyên dương n.
+def counteven(n):
+    if type(n) is int:
+        k=0
+        for x in str(n):
+            if int(x) % 2==2:
+                k+=1
+        return k
+    else:
+        return "So khong hop le"
+#48. Hãy tính tích các chữ số lẻ của số nguyên dương n.
+def multiodd(n):
+    if type(n) is int:
+        k=1
+        for x in str(n):
+            if int(x) % 2==1:
+                k*=int(x)
+        return k
+    else:
+        return "So khong hop le"
+#49. Cho số nguyên dương n. Hãy tìm chữ số đầu tiên của n.
+def findfirstletter(n):
+    if type(n) is int:
+       return str(n)[0]
+    else:
+        return "So khong hop le"
+#50. Hãy tìm chữ số đảo ngược của số nguyên dương n.
+def findNReverse(n):
+    if type(n) is int:
+        return int(str(n)[::-1])
+    else:
+        return "So khong hop le"
+#51. Tìm chữ số lớn nhất của số nguyên dương n.
+def findMax(n):
+    if type(n) is int:
+        l=[int(x) for x in str(n)]
+        return max(l) if l else None
+    else:
+        return "So khong hop le"
+#52. Tìm chữ số nhỏ nhất của số nguyên dương n.
+def findMin(n):
+    if type(n) is int:
+        l=[int(x) for x in str(n)]
+        return min(l) if l else None
+    else:
+        return "So khong hop le"
+#53. Hãy đếm số lượng chữ số lớn nhất của số nguyên dương n.
+def countMax(n):
+    return str(n).count(str(findMax(n)))
+#54. Hãy đếm số lượng chữ số nhỏ nhất của số nguyên dương n.
+def countMin(n):
+    return str(n).count(str(findMin(n)))
+#55. Hãy đêm số lượng chữ số đầu tiên của số nguyên dương n.
+def countfirstnumber(n):
+    return str(n).count(str(findfirstletter(n)))
+#56. Hãy kiểm tra số nguyên dương n có toàn chữ số lẻ hay không?
+def checkodd(n):
+    return countodd(n)==len(str(n))
+#57. Hãy kiểm tra số nguyên dương n có toàn chữ số chẵn hay không?
+#58. Hãy kiểm tra số nguyên dương n có toàn chữ số chẵn hay không?
+def checkodd(n):
+    return counteven(n)==len(str(n))
+#59. Hãy kiểm tra số nguyên dương n có phải số đối xứng hay không?
+def sodoixung(n):
+  return str(n) == str(n)[::-1]
+#60. Hãy kiểm tra các chữ số của số nguyên dương n có tăng dần từ trái sang phải hay không?
+def checkAscending(n):
+    l=[int(x) for x in str(n)]
+    return sorted(l)==l
+#61. Hãy kiểm tra các chữ số của số nguyên dương n có giảm dần từ trái sang phải hay không?
+def checkDescending(n):
+    l=[int(x) for x in str(n)]
+    return sorted(l,reverse=True)==l
+#62. Cho hai số nguyên dương a và b. Hãy vẽ lưu đồ tìm ước chung lớn nhất của hai giá trị này.
+
+#63. Cho hai số nguyên dương a và b. Hãy vẽ lưu đồ tìm bội chung nhỏ nhất của hai giá trị này.
+#64. Giải phương trình 𝑎𝑥 + 𝑏 = 0.
+#65. Giải phương trình 𝑎𝑥2 + 𝑏𝑥 + 𝑐 = 0.
+#66. Giải phương trình 𝑎𝑥4 + 𝑏𝑥2 + 𝑐 = 0.
